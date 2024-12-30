@@ -5,18 +5,19 @@ import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import { Menu } from "./pages/Menu/Menu.tsx";
 import { Cart } from "./pages/Cart/Cart.tsx";
 import { Error } from "./pages/Error/Error.tsx";
+import {DefaultLayout} from "./layouts/menu/DefaultLayout.tsx";
 
 const router = createBrowserRouter([
   {
     path: "/",
-    element: <Menu />,
+    element: <DefaultLayout />,
+    children: [
+      {path: '/cart', element: <Cart/>},
+      {path: '/', element: <Menu/>}
+    ]
   },
   {
-    path: "/cart",
-    element: <Cart />,
-  },
-  {
-    path: "/cart",
+    path: "*",
     element: <Error />,
   },
 ]);
