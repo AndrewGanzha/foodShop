@@ -1,0 +1,30 @@
+.button {
+    border-radius: 2.8rem;
+    cursor: pointer;
+    transition: background 0.2s;
+    border: none;
+    color: var(--white);
+}
+
+.accent {
+    background: var(--primary);
+}
+
+.accent:hover {
+    background: var(--primary-hover);
+}
+
+.medium {
+    font-size: 1.6rem;
+    font-style: normal;
+    font-weight: 400;
+    padding: 1rem 2.4rem;
+    height: 4.4rem;
+}
+
+.big {
+    font-size: 1.4rem;
+    padding: 2rem 6rem;
+    text-transform: uppercase;
+    height: 6rem;
+}
